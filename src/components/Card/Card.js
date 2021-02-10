@@ -12,9 +12,9 @@ export default function Card(image, name, house) {
   Card.style.backgroundColor = getColorByHouse(house)
   Card.style.color = 'var(--font-color)'
   Card.innerHTML = `
-  <img class="characterimg" src="${image}">
+  <img class="Card_img" src="${image}">
   <h2>${name}</h2>
-  <span class="housename">${house}</span>
+  <span class="Card_housename">${house}</span>
  `
 
   function getColorByHouse(house) {

@@ -27,9 +27,3 @@ input,
 button {
   font-size: 1em;
 }
-
-.housename {
-  font-family: 'Cinzel', serif;
-  font-size: 15px;
-  color: var(--color-black);
-}
