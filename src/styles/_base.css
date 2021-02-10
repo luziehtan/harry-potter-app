@@ -18,7 +18,18 @@ h3 {
   margin: 0;
 }
 
+h2 {
+  font-size: 45px;
+  font-family: 'Lovers Quarrel', cursive;
+}
+
 input,
 button {
   font-size: 1em;
+}
+
+.housename {
+  font-family: 'Cinzel', serif;
+  font-size: 15px;
+  color: var(--color-black);
 }

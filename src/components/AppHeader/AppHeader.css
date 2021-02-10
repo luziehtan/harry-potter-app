@@ -5,7 +5,12 @@
 }
 
 .AppHeader h1 {
+  font-family: 'Cinzel', serif;
   font-weight: 400;
-  font-size: 1.2rem;
+  font-size: 1.7rem;
   text-align: center;
+}
+
+.logo {
+  margin-left: 5px;
 }
