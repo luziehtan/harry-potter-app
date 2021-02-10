@@ -12,6 +12,9 @@ export default function App() {
 
   HouseFilter(createCards)
 
+  const cardContainer = createElement('section', { className: 'cardContainer' })
+  document.body.append(cardContainer)
+
   // fetch API (siehe services -> getCharacters.js)
   getCharacters()
     .then(characters => createCards(characters))
@@ -21,7 +24,8 @@ export default function App() {
     const cards = characters.map(character =>
       Card(character.image, character.name, character.house)
     )
-    document.body.append(...cards)
+    cardContainer.innerHTML = ''
+    cardContainer.append(...cards)
   }
 
   function handleGetCharacterError(error) {
