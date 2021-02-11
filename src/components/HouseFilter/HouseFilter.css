@@ -1,0 +1,29 @@
+.HouseFilter__box {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.HouseFilter__box--big {
+  display: flex;
+  justify-content: center;
+}
+
+.HouseFilter__buttontext {
+  text-align: center;
+  font-size: 11px;
+}
+
+.HouseFilter__icons {
+  border: 1px solid black;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 0.25rem var(--color-black));
+  cursor: pointer;
+}
+
+.HouseFilter__icon--big {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+  cursor: pointer;
+  filter: drop-shadow(0 0 1rem var(--color-black));
+}

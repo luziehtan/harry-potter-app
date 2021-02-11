@@ -6,7 +6,8 @@ import HouseFilter from './components/HouseFilter'
 
 export default function App() {
   const header = AppHeader(
-    `Hogwarts Houses<span class="logo fas fa-hat-wizard"></span>`
+    `
+    Hogwarts Houses<span class="logo fas fa-hat-wizard"></span>`
   )
   document.body.append(header)
 

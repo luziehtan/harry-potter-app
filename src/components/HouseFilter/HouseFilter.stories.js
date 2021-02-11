@@ -5,4 +5,4 @@ export default {
   component: HouseFilter,
 }
 
-export const defaultFilter = () => HouseFilter()
+export const defaultFilter = () => HouseFilter('Filter')

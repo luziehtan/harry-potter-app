@@ -1,7 +1,9 @@
 .AppHeader {
+  border-radius: 8px;
   background: var(--color-primary);
   color: var(--color-white);
   padding: 12px;
+  filter: drop-shadow(0 0 0.25rem var(--color-black));
 }
 
 .AppHeader h1 {
