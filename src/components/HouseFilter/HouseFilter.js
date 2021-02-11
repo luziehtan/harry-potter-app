@@ -1,6 +1,7 @@
 import './HouseFilter.css'
 import createElement from '../../lib/createElement'
 import getCharacters from '../../services/getCharacters'
+import FilterButton from '../FilterButton'
 
 export default function HouseFilter(createCards) {
   const hogwartsButtonBox = createElement('div', {
@@ -17,53 +18,11 @@ export default function HouseFilter(createCards) {
   getCharacters()
     .then(people => characters.push(...people))
     .catch(error => console.log(error))
-  const filterGryffindor = createElement('span', {
-    role: 'button',
-    innerHTML: `
-    <img class="HouseFilter__icons" src="../../assets/gryffindoricon.png" alt="Gryffindor" title="Gryffindor">`,
-  })
-  filterGryffindor.addEventListener('click', () => {
-    const charactersGryffindor = characters.filter(
-      character => character.house === 'Gryffindor'
-    )
-    createCards(charactersGryffindor)
-  })
 
-  const filterHufflepuff = createElement('span', {
-    role: 'button',
-    innerHTML: `
-    <img class="HouseFilter__icons" src="../../assets/hufflepufficon.png" alt="Hufflepuff" title="Hufflepuff">`,
-  })
-  filterHufflepuff.addEventListener('click', () => {
-    const charactersHufflepuff = characters.filter(
-      character => character.house === 'Hufflepuff'
-    )
-    createCards(charactersHufflepuff)
-  })
-
-  const filterRavenclaw = createElement('span', {
-    role: 'button',
-    innerHTML: `
-    <img class="HouseFilter__icons" src="../../assets/ravenclawicon.png" alt="Ravenclaw" title="Ravenclaw">`,
-  })
-  filterRavenclaw.addEventListener('click', () => {
-    const charactersRavenclaw = characters.filter(
-      character => character.house === 'Ravenclaw'
-    )
-    createCards(charactersRavenclaw)
-  })
-
-  const filterSlytherin = createElement('span', {
-    role: 'button',
-    innerHTML: `
-    <img class="HouseFilter__icons" src="../../assets/slytherinicon.png" alt="Slytherin" title="Slytherin">`,
-  })
-  filterSlytherin.addEventListener('click', () => {
-    const charactersSlytherin = characters.filter(
-      character => character.house === 'Slytherin'
-    )
-    createCards(charactersSlytherin)
-  })
+  const filterGryffindor = FilterButton('Gryffindor', characters, createCards) // house, characters, createCards
+  const filterHufflepuff = FilterButton('Hufflepuff', characters, createCards) // house, characters, createCards
+  const filterRavenclaw = FilterButton('Ravenclaw', characters, createCards) // house, characters, createCards
+  const filterSlytherin = FilterButton('Slytherin', characters, createCards) // house, characters, createCards
 
   const allHouses = createElement('span', {
     role: 'button',
