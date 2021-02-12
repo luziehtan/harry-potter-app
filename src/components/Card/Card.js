@@ -12,7 +12,8 @@ export default function Card(image, name, house) {
   Card.style.backgroundColor = getColorByHouse(house)
   Card.style.color = 'var(--font-color)'
   Card.innerHTML = `
-  <img class="Card_img" src="${image}">
+  <section class="Card__img--border">
+  <img class="Card__img" src="${image}"></section>
   <h2>${name}</h2>
   <span class="Card_housename">${house}</span>
  `
