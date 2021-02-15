@@ -23,7 +23,7 @@ export default function App() {
 
   function createCards(characters) {
     const cards = characters.map(character =>
-      Card(character.image, character.name, character.house)
+      Card(character.image, character.name, character.house, character.alive)
     )
     cardContainer.innerHTML = ''
     cardContainer.append(...cards)
