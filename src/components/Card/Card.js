@@ -18,7 +18,7 @@ export default function Card(image, name, house, alive) {
   <h2>${name}</h2>
   <span class="Card_housename">${house}</span>
  `
-  if (alive === false) {
+  if (!alive) {
     Card.append(isCharacterAlive(alive))
   }
 
